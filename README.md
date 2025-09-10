@@ -1,32 +1,42 @@
-# 📌 Course-Service Update – MySQL Integration
+# 📌 Student-Service Update – MongoDB Integration
 
 ## 🚀 New Updates
-- **course-service** is now connected to **MySQL (Docker container)**.
-- Added database configuration in `application.properties`.
-- MySQL runs on **port 15000** (mapped from container’s default 3306).
+- **student-service** is now connected to **MongoDB (Docker container)**.
+- Added MongoDB configuration in `application.properties`.
+- MongoDB runs on **port 16000** (mapped from container’s default 27017).
 
 ---
 
 ## 🐳 Docker Setup
 
 ```bash
-docker run --name mysql \
-  -v mysql-data:/var/lib/mysql \
-  -e MYSQL_ROOT_PASSWORD=mysql \
-  -p 15000:3306 \
-  -d mysql:lts
+docker run --name mongo \
+  -v mongo-data:/data/db \
+  -e MONGO_INITDB_ROOT_USERNAME=root \
+  -e MONGO_INITDB_ROOT_PASSWORD=mongo \
+  -p 16000:27017 \
+  -d mongo:latest
 ```
 
 ## 🔎 Explanation
 
-- `-- name mysql`   → Names the container mysql.
+`--name mongo`
+Names the container mongo.
 
-- `-v mysql-data:/var/lib/mysql`   → Persists data in a Docker volume named mysql-data.
+`-v mongo-data:/data/db`
+Persists data in a Docker volume named mongo-data.
 
-- `-e MYSQL_ROOT_PASSWORD=mysql`   → Sets MySQL root password to mysql.
+`-e MONGO_INITDB_ROOT_USERNAME=root`
+Sets the MongoDB root username to root.
 
-- `-p 15000:3306`   → Maps host port 15000 -> container port 3306.
+`-e MONGO_INITDB_ROOT_PASSWORD=mongo`
+Sets the MongoDB root password to mongo.
 
-- `-d`  → Runs container in detached (background) mode.
+`-p 16000:27017`
+Maps host port 16000 → container port 27017 (default MongoDB port).
 
-- `mysql:lts`  → Uses the MySQL LTS image.
+`-d`
+Runs container in detached (background) mode.
+
+`mongo:latest`
+Uses the latest official MongoDB image.
