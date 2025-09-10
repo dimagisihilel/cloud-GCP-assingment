@@ -1,19 +1,32 @@
-# Cloud Assignment with GCP
+# 📌 Course-Service Update – MySQL Integration
 
-## Project Structure
+## 🚀 New Updates
+- **course-service** is now connected to **MySQL (Docker container)**.
+- Added database configuration in `application.properties`.
+- MySQL runs on **port 15000** (mapped from container’s default 3306).
 
-- **course-service** (Spring Boot + MySQL)
-  - Port: 8081
-  - CRUD for Courses (id, name, duration)
+---
 
-- **student-service** (Spring Boot + MongoDB)
-  - Port: 8082
-  - CRUD for Students (registrationNumber, fullName, address, contact, email)
+## 🐳 Docker Setup
 
-- **media-service** (Spring Boot + Local storage / S3-ready)
-  - Port: 8083
-  - File upload, fetch, list, delete (`./data/media` by default)
+```bash
+docker run --name mysql \
+  -v mysql-data:/var/lib/mysql \
+  -e MYSQL_ROOT_PASSWORD=mysql \
+  -p 15000:3306 \
+  -d mysql:lts
+```
 
-- **frontend-app** (React + TypeScript + MUI + Vite)
-  - Sections: Courses, Students, Media
-  - Scripts: `npm run dev`, `npm run build`, `npm run preview`  
+## 🔎 Explanation
+
+- `-- name mysql`   → Names the container mysql.
+
+- `-v mysql-data:/var/lib/mysql`   → Persists data in a Docker volume named mysql-data.
+
+- `-e MYSQL_ROOT_PASSWORD=mysql`   → Sets MySQL root password to mysql.
+
+- `-p 15000:3306`   → Maps host port 15000 -> container port 3306.
+
+- `-d`  → Runs container in detached (background) mode.
+
+- `mysql:lts`  → Uses the MySQL LTS image.
