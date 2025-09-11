@@ -5,7 +5,7 @@ This assignment outlines the steps to connect **course-service** Spring Boot app
 
 Here is the screen recording of the project's demonstration.
 
-### ▶️ **[Click Here to Watch the Video Demonstration](https://drive.google.com/file/d/your-google-drive-file-id/view?usp=sharing)**
+### ▶️ **[Click Here to Watch the Video Demonstration](https://drive.google.com/file/d/18basFnJ-0iSLUoHp32yDujygQuJF5hSy/view?usp=sharing)**
 
 ---
 
@@ -73,7 +73,7 @@ Add courses via the frontend and verify storage in the `eca_courses` database.
 
 ## 📜 License
 
-This project is licensed under the [MIT License](https://drive.google.com/file/d/your-google-drive-file-id/view?usp=sharing). See the LICENSE.md file for details.
+This project is licensed under the [MIT License](https://github.com/dimagisihilel/cloud-GCP-assingment/blob/master/LICENSE.md). See the LICENSE.md file for details.
 
 ---
 
