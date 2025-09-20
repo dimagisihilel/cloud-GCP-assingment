@@ -8,6 +8,13 @@ Here is the screen recording of the project's demonstration.
 ### ▶️ **[Click Here to Watch the Video Demonstration](https://drive.google.com/file/d/18basFnJ-0iSLUoHp32yDujygQuJF5hSy/view?usp=sharing)**
 
 ---
+## 🙋🏻‍♂️ Personal Information
+
+- `Name` - Dimagi Sihilel Gunarathne
+- `Student No` - 2301671118
+- `Email` - gunarathneedirimuni@gmail.com
+
+---
 
 ## 📂 Project Structure
 
